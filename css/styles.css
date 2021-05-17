@@ -102,6 +102,7 @@ img {
 .primary-link::after {
   display: block;
   content: '';
+  border-radius: 2px;
   height: 4px;
   margin: 0 auto;
   margin-top: 28px;
@@ -270,11 +271,11 @@ img {
   background-image: url('../images/astronaut.svg');
 } */
 .feature-list-icon {
-  display: block;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   padding: 25px 100px;
+  border-radius: 4px;
   background-color: var(--third-background-color);
 }
 .feature-icon {
@@ -306,7 +307,7 @@ img {
 .courses-list .courses-list-item + .courses-list-item {
   margin-left: 30px;
 }
-.courses-link {
+.courses-list-item {
   position: relative;
   display: flex;
 }
@@ -314,8 +315,8 @@ img {
   position: absolute;
   margin: 0 auto;
   padding-top: 27px;
+  padding-bottom: 27px;
   width: 100%;
-  height: 70px;
   bottom: 0;
   background: rgba(47, 48, 58, 0.8);
   font-style: normal;
@@ -396,10 +397,12 @@ img {
 .crew-icon-item:not(:last-child) {
   margin-right: 10px;
 }
+.crew-icon-link:focus,
 .crew-icon-link:hover {
   fill: var(--white-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  outline: none;
 }
 /* Clients */
 
@@ -452,9 +455,11 @@ img {
   width: 88px;
   height: 45px;
 }
+.clients-link:focus,
 .clients-link:hover {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
+  outline: none;
 }
 
 /* Projects */
@@ -472,7 +477,8 @@ img {
   flex-basis: calc(100% / 3 - var(--projects-list-item-gap));
   margin-left: var(--projects-list-item-gap);
   margin-top: var(--projects-list-item-gap);
-  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-item:hover {
@@ -481,6 +487,7 @@ img {
 }
 .card-content {
   padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
 }
 /* alternative variant for .projects-list-item*/
 /* .projects-list-item {
@@ -637,10 +644,12 @@ img {
 .footer-icon-item:not(:last-child) {
   margin-right: 10px;
 }
+.footer-icon-link:focus,
 .footer-icon-link:hover {
   fill: var(--white-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  outline: none;
 }
 .footer-right-side {
   display: block;
@@ -777,7 +786,7 @@ img {
 .modal-form {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  padding: 40px;
 }
 .modal-head {
   font-style: normal;
